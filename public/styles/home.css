@@ -1,0 +1,32 @@
+._bg-primary {
+  background-color: #FB6107;
+}
+
+._bg-secondary {
+  background-color: #17C3B2;
+}
+
+._bg-dark {
+  background-color: #063732;
+}
+
+
+.navbar-custom {
+  background-color: #17C3B2;
+  padding: 2rem 0 4rem 0;
+}
+
+.kategori {
+  position: absolute;
+  margin-top: -2rem 0 0 0;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
