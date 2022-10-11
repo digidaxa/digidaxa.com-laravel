@@ -39,6 +39,8 @@
     @include('partials.home.hero')
 
     @yield('container')
+
+    @include('partials.home.navbottom')
 </body>
 
 </html>

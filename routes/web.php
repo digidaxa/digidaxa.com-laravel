@@ -22,6 +22,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/dasbor', [DashboardController::class, 'index']);
 Route::get('/login', [AuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'loginAuthenticate']);
 Route::post('/logout', [AuthController::class, 'logoutAuthenticate']);
