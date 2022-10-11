@@ -13,11 +13,11 @@
     <li class="hidden lg:block">
       <form method="GET" action="/cari" class="flex bg-light rounded-full">
         @csrf
+        <input type="checkbox" id="search-icon" class="sr-only focus:outline-none bg-transparent">
+        <input type="text" id="search-input" class="hidden ml-3 focus:outline-none bg-transparent lg:text-sm" name="cari" placeholder="Cari toko atau produk" value="{{ old('keyword') }}">
         <label for="search-icon" class="py-2 px-4 cursor-pointer">
           <i class="fas fa-search text-lg text-secondary" aria-hidden="true"></i>
         </label>
-        <input type="checkbox" id="search-icon" class="sr-only focus:outline-none bg-transparent">
-        <input type="text" id="search-input" class="hidden mr-2 focus:outline-none bg-transparent lg:text-sm" name="cari" placeholder="Cari toko atau produk" value="{{ old('keyword') }}">
       </form>
     </li>
     <li class="mb-1">

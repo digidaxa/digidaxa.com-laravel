@@ -709,6 +709,9 @@ video {
 .mb-16 {
   margin-bottom: 4rem;
 }
+.ml-2 {
+  margin-left: 0.5rem;
+}
 .block {
   display: block;
 }
@@ -765,6 +768,15 @@ video {
 }
 .min-h-full {
   min-height: 100%;
+}
+.min-h-\[44px\] {
+  min-height: 44px;
+}
+.min-h-\[36px\] {
+  min-height: 36px;
+}
+.min-h-\[32px\] {
+  min-height: 32px;
 }
 .w-full {
   width: 100%;
@@ -825,6 +837,15 @@ video {
 }
 .w-11 {
   width: 2.75rem;
+}
+.min-w-\[44px\] {
+  min-width: 44px;
+}
+.min-w-\[36px\] {
+  min-width: 36px;
+}
+.min-w-\[32px\] {
+  min-width: 32px;
 }
 .max-w-\[250px\] {
   max-width: 250px;

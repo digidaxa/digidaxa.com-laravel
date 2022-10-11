@@ -4,7 +4,7 @@
       <div class="px-4 flex items-center gap-2">
         <button 
           id="hamburger" 
-          class="block text-base font-semibold px-2 py-1 bg-light rounded hover:text-primary lg:hidden"
+          class="min-w-[32px] min-h-[32px] block text-base font-semibold bg-light rounded hover:text-primary lg:hidden"
           onclick="toggleSidebar()"
         >
           <i class="fas fa-bars" aria-hidden="true"></i>
@@ -15,7 +15,7 @@
             alt="Logo Digidaxa"
             class="mr-2 h-8 w-8 hidden lg:block"
           />
-          <span class="text-2xl text-light lg:text-xl">
+          <span class="text-2xl font-bold text-light lg:text-xl">
             Digidaxa Web
           </span>
         </a>
