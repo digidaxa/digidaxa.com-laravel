@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Digidaxa">
     <meta name="author" content="Digidaxa studio">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -29,17 +29,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/icon/favicon-16x16.png' }}">
     <link rel="manifest" href="{{ '/img/icon/manifest.json' }}">
 
-    <link href="{{ '/bootstrap/css/bootstrap.min.css' }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link href="{{ '/styles/home.css' }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 </head>
 
 <body>
-    <header>
-        @include('partials.home.navbar')
-    </header>
-
+    @include('partials.home.navbar')
     @include('partials.home.hero')
 
     @yield('container')
