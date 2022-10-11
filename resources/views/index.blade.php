@@ -1,6 +1,7 @@
 @extends('layouts.home')
-
 @section('container')
+
+@include('partials.home.hero')
 <section id="Terkini" class="mt-20 pb-28">
   <div class="container">
     <h3 class="text-xl px-4 font-semibold">Terkini</h3>

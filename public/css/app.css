@@ -1106,6 +1106,10 @@ video {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -1132,6 +1136,21 @@ video {
 }
 .pb-36 {
   padding-bottom: 9rem;
+}
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+.pt-10 {
+  padding-top: 2.5rem;
+}
+.pt-0 {
+  padding-top: 0px;
+}
+.pt-8 {
+  padding-top: 2rem;
 }
 .text-left {
   text-align: left;

@@ -36,7 +36,7 @@
 
 <body>
     @include('partials.home.header')
-    @include('partials.home.hero')
+    {{-- @include('partials.home.hero') --}}
 
     @yield('container')
 
