@@ -1,6 +1,6 @@
 <section id="hero" class="absolute w-full top-44 lg:block">
   <div class="container">
-    <h2 class="text-xl text-light px-4">Kategori</h2>
+    <h2 class="text-xl text-light px-4 font-semibold">Kategori</h2>
     <div class="flex flex-row px-4 mt-3 gap-5">
       <a href="#" class="transition-all duration-100 bg-primary text-light rounded w-1/3 h-24 group hover:brightness-125">
         <div class="flex flex-wrap m-3 gap-1">
