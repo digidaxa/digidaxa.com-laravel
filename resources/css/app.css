@@ -18,7 +18,7 @@ body {
 }
 
 .nav-link{
-  @apply text-base py-2 mx-6 flex hover:text-primary hover:border-b-2 lg:mx-4;
+  @apply text-base lg:text-light mb-1 py-2 mx-6 flex hover:border-b-2 lg:mx-4;
 }
 
 .nav-link-active{

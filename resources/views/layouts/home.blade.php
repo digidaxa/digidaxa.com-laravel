@@ -29,16 +29,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/icon/favicon-16x16.png' }}">
     <link rel="manifest" href="{{ '/img/icon/manifest.json' }}">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
 </head>
 
 <body>
-    @include('partials.home.navbar')
+    @include('partials.home.header')
     @include('partials.home.hero')
 
     @yield('container')
-    <script src="{{ '/bootstrap/js/bootstrap.bundle.min.js' }}"></script>
 </body>
 
 </html>
