@@ -40,6 +40,7 @@
 
     @yield('container')
 
+    @include('partials.home.footer')
     @include('partials.home.navbottom')
 </body>
 
