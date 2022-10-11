@@ -4,7 +4,7 @@
   <h1 class="h3 mb-4 text-gray-800">{{ $title }}</h1>
   <div class="row">
     <div class="col-12 col-lg-6 col-md-10 mb-3">
-      <form action="{{ '/categories/add' }}" method="post">
+      <form action="{{ '/admin/categories/add' }}" method="post">
         @csrf
         <div class="form-group">
           <label for="name">Name</label>
@@ -24,7 +24,7 @@
             </div>
           @enderror
         </div>
-        <a href="{{ '/products/categories' }}" class="btn btn-secondary">&larr; Back</a>
+        <a href="{{ '/admin/products/categories' }}" class="btn btn-secondary">&larr; Back</a>
         <button type="submit" class="btn btn-primary" id="submitbtn">Save</button>
       </form>
       <script>
@@ -32,7 +32,7 @@
         const slug = document.querySelector('#slug');
 
         name.addEventListener('change', function() {
-          fetch('/products/checkSlug?name=' + name.value)
+          fetch('/admin/products/checkSlug?name=' + name.value)
           .then(response => response.json())
           .then(data => slug.value = data.slug)
         });

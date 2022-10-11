@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('container')
-    <h1 class="h3 mb-4 text-gray-800">{{ $title }} <a href="{{ '/products/add' }}" class="btn btn-sm btn-outline-primary">Add New</a></h1>
+    <h1 class="h3 mb-4 text-gray-800">{{ $title }} <a href="{{ '/admin/products/add' }}" class="btn btn-sm btn-outline-primary">Add New</a></h1>
     @if (session()->has('messageSuccess'))
         <div class="row">
             <div class="col-12">
@@ -49,16 +49,16 @@
                                 @foreach ($products as $product)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><a href="{{ '/products/'.$product->slug }}">{{ $product->name }}</a></td>
-                                    <td><a href="{{ '/products/categories/'. $product->category->slug  }}">{{ $product->category->name }}</a></td>
-                                    <td><a href="{{ '/products/publishers/'. $product->publisher->username }}">{{ $product->publisher->name }}</a></td>
+                                    <td><a href="{{ '/admin/products/'.$product->slug }}">{{ $product->name }}</a></td>
+                                    <td><a href="{{ '/admin/products/categories/'. $product->category->slug  }}">{{ $product->category->name }}</a></td>
+                                    <td><a href="{{ '/admin/products/publishers/'. $product->publisher->username }}">{{ $product->publisher->name }}</a></td>
                                     <td>{{ TimeFormater($product->created_at) }}</td>
                                     <td>{{ TimeFormater($product->updated_at) }}</td>
                                     <td>
-                                        <a href="{{ '/products/'. $product->slug . '/edit' }}" class="btn btn-sm btn-warning mb-1">
+                                        <a href="{{ '/admin/products/'. $product->slug . '/edit' }}" class="btn btn-sm btn-warning mb-1">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ '/products/'. $product->id }}" method="post" class="d-inline">
+                                        <form action="{{ '/admin/products/'. $product->id }}" method="post" class="d-inline">
                                             @method('delete')
                                             @csrf
                                             <button class="btn btn-sm btn-danger mb-1 b-0" onclick="return confirm('Are you sure?')">

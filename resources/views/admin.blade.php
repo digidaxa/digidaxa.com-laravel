@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('container')
-    <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+    <h1 class="h3 mb-4 text-gray-800">Admin</h1>
     <p>Welcome back <b>{{ auth()->user()->name }}</b>, </p>
     <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-6 mb-4">

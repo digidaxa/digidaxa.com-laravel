@@ -1,20 +1,20 @@
-<ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ '/' }}">
         <div class="sidebar-brand-icon">
-            <img src="{{ '/img/logo.webp' }}" class="w-100 h-100" alt="logo Digidaxa">
+            <i class="fas fa-fw fa-home"></i>
         </div>
         <div class="sidebar-brand-text ml-3">
-            Digidaxa
+            Beranda
         </div>
     </a>
 
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item {{ (Request::is('/')) ? 'active' : ''}}">
-        <a class="nav-link" href="{{ '/' }}">
+    <!-- Nav Item - admin -->
+    <li class="nav-item {{ (Request::is('/admin')) ? 'active' : ''}}">
+        <a class="nav-link" href="{{ '/admin' }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span>Admin</span></a>
     </li>
     <hr class="sidebar-divider">
 
@@ -22,18 +22,18 @@
         3D Model Management
     </div>
 
-    <li class="nav-item {{ (Request::is('products/*')) ? 'active' : ''; }}">
-        <a class="nav-link {{ (Request::is('products/*')) ? '' : 'collapsed'; }}" href="#" data-toggle="collapse" data-target="#collapseProducts"
+    <li class="nav-item {{ (Request::is('admin/products/*')) ? 'active' : ''; }}">
+        <a class="nav-link {{ (Request::is('admin/products/*')) ? '' : 'collapsed'; }}" href="#" data-toggle="collapse" data-target="#collapseProducts"
             aria-expanded="true" aria-controls="collapseProducts">
             <i class="fas fa-fw fa-box"></i>
             <span>Products</span>
         </a>
-        <div id="collapseProducts" class="collapse {{ (Request::is('products/*')) ? 'show' : ''; }}" aria-labelledby="headingProducts" data-parent="#accordionSidebar">
+        <div id="collapseProducts" class="collapse {{ (Request::is('admin/products/*')) ? 'show' : ''; }}" aria-labelledby="headingProducts" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Manage Products:</h6>
-                <a class="collapse-item {{ (Request::is('products/*list')) ? 'active' : '' }}" href="{{ '/products/list' }}">All</a>
-                <a class="collapse-item {{ (Request::is('products/*add')) ? 'active' : '' }}" href="{{ '/products/add' }}">Add New</a>
-                <a class="collapse-item {{ (Request::is('products/*categories')) ? 'active' : '' }}" href="{{ '/products/categories' }}">Categories</a>
+                <a class="collapse-item {{ (Request::is('admin/products/*list')) ? 'active' : '' }}" href="{{ '/admin/products/list' }}">All</a>
+                <a class="collapse-item {{ (Request::is('admin/products/*add')) ? 'active' : '' }}" href="{{ '/admin/products/add' }}">Add New</a>
+                <a class="collapse-item {{ (Request::is('admin/products/*categories')) ? 'active' : '' }}" href="{{ '/admin/products/categories' }}">Categories</a>
             </div>
         </div>
     </li>

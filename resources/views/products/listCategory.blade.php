@@ -28,7 +28,7 @@
                                 @foreach ($categories as $category)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><a href="{{ '/products/categories/'. $category->slug }}">{{ $category->name }}</a></td>
+                                    <td><a href="{{ '/admin/products/categories/'. $category->slug }}">{{ $category->name }}</a></td>
                                     <td>{{ $category->slug }}</td>
                                 </tr>
                                 @endforeach

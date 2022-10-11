@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Products;
 
-class DashboardController extends Controller
+class AdminController extends Controller
 {
     public function index()
     {
-        return view('dashboard', [
+        return view('admin', [
             'siteName' => 'Digidaxa 3D Management',
-            'title' => 'Dashboard',
+            'title' => 'Admin',
             'countProduct' => Products::count(),
             'countCategory' => Category::count()
         ]);

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('container')
-    <h1 class="h3 mb-4 text-gray-800">{{ $title }} <a href="{{ '/categories/add' }}" class="btn btn-sm btn-outline-primary">Add New</a></h1>
+    <h1 class="h3 mb-4 text-gray-800">{{ $title }} <a href="{{ '/admin/categories/add' }}" class="btn btn-sm btn-outline-primary">Add New</a></h1>
     @if (session()->has('messageSuccess'))
         <div class="row">
             <div class="col-12">
@@ -53,13 +53,13 @@
                                 @foreach ($categories as $category)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><a href="{{ '/products/categories/'. $category->slug }}">{{ $category->name }}</a></td>
+                                    <td><a href="{{ '/admin/products/categories/'. $category->slug }}">{{ $category->name }}</a></td>
                                     <td>{{ $category->slug }}</td>
                                     <td>
-                                        <a href="{{ '/categories/'. $category->slug . '/edit' }}" class="btn btn-sm btn-warning mb-1">
+                                        <a href="{{ '/admin/categories/'. $category->slug . '/edit' }}" class="btn btn-sm btn-warning mb-1">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ '/categories/'. $category->id }}" method="post" class="d-inline">
+                                        <form action="{{ '/admin/categories/'. $category->id }}" method="post" class="d-inline">
                                             @method('delete')
                                             @csrf
                                             <button class="btn btn-sm btn-danger mb-1 b-0" onclick="return confirm('Are you sure?')">

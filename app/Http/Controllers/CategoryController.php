@@ -35,7 +35,7 @@ class CategoryController extends Controller
 
         Category::create($validatedData);
 
-        return redirect('/products/categories')->with('messageSuccess', 'New category has been added!');
+        return redirect('/admin/products/categories')->with('messageSuccess', 'New category has been added!');
     }
 
     public function edit(Category $category)
@@ -62,7 +62,7 @@ class CategoryController extends Controller
         Category::where('id', $category->id)
         ->update($validatedData);
 
-        return redirect('/products/categories')->with('messageSuccess', 'Category has been updated!');
+        return redirect('/admin/products/categories')->with('messageSuccess', 'Category has been updated!');
     }
     
     public function delete(Category $category)
@@ -70,10 +70,10 @@ class CategoryController extends Controller
         $CategoryInUse = Category::where('id', $category->id)->withCount('products')->get()[0]->products_count;
         
         if($CategoryInUse) {
-            return redirect('/products/categories')->with('messageFail', 'Category can\'t be deleted, because in use on the product!');
+            return redirect('/admin/products/categories')->with('messageFail', 'Category can\'t be deleted, because in use on the product!');
         } else {
             Category::destroy($category->id);
-            return redirect('/products/categories')->with('messageSuccess', 'Category has been deleted!');
+            return redirect('/admin/products/categories')->with('messageSuccess', 'Category has been deleted!');
         }
 
     }

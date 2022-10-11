@@ -92,7 +92,7 @@ class ProductsController extends Controller
 
         Products::create($validatedData);
 
-        return redirect('/products/list')->with('messageSuccess', 'New product has been added!');
+        return redirect('/admin/products/list')->with('messageSuccess', 'New product has been added!');
     }
 
     public function delete(Products $product)
@@ -102,7 +102,7 @@ class ProductsController extends Controller
         }
 
         Products::destroy($product->id);
-        return redirect('/products/list')->with('messageSuccess', 'Product has been deleted!');
+        return redirect('/admin/products/list')->with('messageSuccess', 'Product has been deleted!');
     }
 
     public function edit(Products $product)
@@ -144,6 +144,6 @@ class ProductsController extends Controller
         Products::where('id', $product->id)
         ->update($validatedData);
 
-        return redirect('/products/list')->with('messageSuccess', 'Product has been updated!');
+        return redirect('/admin/products/list')->with('messageSuccess', 'Product has been updated!');
     }
 }
