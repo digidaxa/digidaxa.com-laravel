@@ -1,0 +1,52 @@
+:root {
+  --color-primary: 251 97 7;
+  --color-secondary: 23 195 178;
+  --color-dark: 6 55 50;
+  --color-light: 255 255 255;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-light bg-opacity-70 backdrop-blur-sm drop-shadow dark:bg-dark dark:bg-opacity-50;
+}
+
+.nav-link{
+  @apply text-base py-2 mx-6 flex hover:text-primary hover:border-b-2 lg:mx-4;
+}
+
+.nav-link-active{
+  @apply text-primary border-b-2
+}
+
+@layer components {
+  .skip-link {
+    @apply absolute no-underline -top-10 left-0 bg-primary text-light p-2 z-[999999]
+  }
+
+  .hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-light
+  }
+}
+
+@layer utilities {
+  .hamburger-active> span:nth-child(1) {
+    @apply rotate-45;
+  }
+  .hamburger-active> span:nth-child(2) {
+    @apply scale-0;
+  }
+  .hamburger-active> span:nth-child(3) {
+    @apply -rotate-45;
+  }
+
+  .dropdown-link {
+    @apply block pl-2 pr-4 py-2 mt-2 rounded-lg
+  }
+}
