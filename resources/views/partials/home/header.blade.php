@@ -1,4 +1,4 @@
-<header class="top-0 left-0 z-10 flex w-full items-center bg-secondary pb-28 lg:pb-0">
+<header class="top-0 left-0 flex w-full items-center bg-secondary pb-28 lg:pb-0">
   <div class="container">
     <div class="relative flex flex-wrap items-center justify-between">
       <div class="px-4 flex items-center gap-2">
