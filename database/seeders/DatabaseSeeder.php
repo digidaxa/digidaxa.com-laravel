@@ -24,42 +24,61 @@ class DatabaseSeeder extends Seeder
             'email' => 'decorunic.wall@gmail.com',
             'password' => Hash::make('sehatkayabahagia')
         ]);
-            
-        User::factory(3)->create();
+
+        // Animals, Architecture, Art, Cars & Vehicles, Character, Electronic, Fashion, Furniture, Places & Travels, Plants & Nature, Retail, Sci-Fi & Game, Weapons
 
         Category::create([
-            'name' => 'Uncategorized',
-            'slug' => 'uncategorized'
+            'name' => 'Animals',
+            'slug' => 'animals',
+            'icon' => 'animals.png'
         ]);
 
         Category::create([
-            'name' => 'Meja TV',
-            'slug' => 'meja-tv'
+            'name' => 'Architecture',
+            'slug' => 'architecture',
+            'icon' => 'architecture.png'
         ]);
 
         Category::create([
-            'name' => 'Meja Tamu',
-            'slug' => 'meja-tamu'
+            'name' => 'Art',
+            'slug' => 'art',
+            'icon' => 'art.png'
         ]);
 
-        Products::factory(10)->create();
-        
-        // Products::create([
-        //     'name' => 'Meja TV Minimalis Kekinian Ishana - TV Table Modern Multifungsi',
-        //     'category_id' => 1,
-        //     'user_id' => 1,
-        //     'slug' => 'meja-tv-minimalis-kekinian-ishana-tv-table-modern-multifungsi',
-        //     'image_url' => 'https://decorunic.id/wp-content/uploads/2021/10/2-7-scaled.jpg',
-        //     'file' => 'ishana.glb'
-        // ]);
+        Category::create([
+            'name' => 'Cars & Vehicles',
+            'slug' => 'cars-vehicles',
+            'icon' => 'cars-vehicles.png'
+        ]);
 
-        // Products::create([
-        //     'name' => 'Lina Lift Up Table - Meja Tamu Meja Kerja Minimalis',
-        //     'category_id' => 2,
-        //     'user_id' => 1,
-        //     'slug' => 'lina-lift-up-table-meja-tamu-minimalis',
-        //     'image_url' => 'https://decorunic.id/wp-content/uploads/2021/10/2-7-scaled.jpg',
-        //     'file' => 'luna-lift-up.glb'
-        // ]);
+        Category::create([
+            'name' => 'Character',
+            'slug' => 'character',
+            'icon' => 'character.png'
+        ]);
+
+        Category::create([
+            'name' => 'Electronic',
+            'slug' => 'electronic',
+            'icon' => 'electronic.png'
+        ]);
+
+        Category::create([
+            'name' => 'Fashion',
+            'slug' => 'fashion',
+            'icon' => 'fashion.png'
+        ]);
+
+        Category::create([
+            'name' => 'Furniture',
+            'slug' => 'furniture',
+            'icon' => 'furniture.png'
+        ]);
+
+        Category::create([
+            'name' => 'Places & Travels',
+            'slug' => 'places-travels',
+            'icon' => 'places-travels.png'
+        ]);
     }
 }

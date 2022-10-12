@@ -33,7 +33,11 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     {{-- jika di path home --}}
-    @if (Request::is('/'))<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>@endif
+    @if (Request::is('/'))<link rel="stylesheet" href={{ "/owl-carousel/owl.carousel.min.css" }}>
+    <link rel="stylesheet" href={{ "/owl-carousel/owl.theme.default.min.css" }}>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src={{ "/owl-carousel/owl.carousel.min.js" }}></script>
+    @endif
 
 </head>
 

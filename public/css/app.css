@@ -528,6 +528,12 @@ video {
 .relative {
   position: relative;
 }
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
 .top-1\/2 {
   top: 50%;
 }
@@ -557,6 +563,15 @@ video {
 }
 .m-3 {
   margin: 0.75rem;
+}
+.m-10 {
+  margin: 2.5rem;
+}
+.m-9 {
+  margin: 2.25rem;
+}
+.m-\[12px\] {
+  margin: 12px;
 }
 .my-5 {
   margin-top: 1.25rem;
@@ -635,6 +650,12 @@ video {
 .-ml-2 {
   margin-left: -0.5rem;
 }
+.-ml-16 {
+  margin-left: -4rem;
+}
+.-mr-16 {
+  margin-right: -4rem;
+}
 .block {
   display: block;
 }
@@ -668,6 +689,12 @@ video {
 .h-7 {
   height: 1.75rem;
 }
+.h-80 {
+  height: 20rem;
+}
+.h-12 {
+  height: 3rem;
+}
 .min-h-\[32px\] {
   min-height: 32px;
 }
@@ -695,6 +722,15 @@ video {
 .min-w-\[32px\] {
   min-width: 32px;
 }
+.max-w-4xl {
+  max-width: 56rem;
+}
+.max-w-\[12\] {
+  max-width: 12;
+}
+.max-w-\[48px\] {
+  max-width: 48px;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -709,6 +745,9 @@ video {
 }
 .justify-start {
   justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
 }
 .justify-center {
   justify-content: center;
@@ -791,8 +830,28 @@ video {
 .bg-transparent {
   background-color: transparent;
 }
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+.bg-slate-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .fill-current {
   fill: currentColor;
+}
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.object-left {
+  -o-object-position: left;
+     object-position: left;
 }
 .p-5 {
   padding: 1.25rem;
@@ -802,6 +861,15 @@ video {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-24 {
+  padding: 6rem;
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.p-2 {
+  padding: 0.5rem;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -830,6 +898,10 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .pb-28 {
   padding-bottom: 7rem;
@@ -947,6 +1019,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+.text-slate-500 {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity));
+}
 .opacity-50 {
   opacity: 0.5;
 }
@@ -979,6 +1055,9 @@ video {
 }
 .duration-75 {
   transition-duration: 75ms;
+}
+.duration-200 {
+  transition-duration: 200ms;
 }
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
