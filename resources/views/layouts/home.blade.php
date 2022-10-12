@@ -42,7 +42,9 @@
 </head>
 
 <body>
+    @if (Request::is('/'))
     @include('partials.home.header')
+    @endif
     {{-- @include('partials.home.hero') --}}
 
     @yield('container')
