@@ -77,4 +77,15 @@ class HomeController extends Controller
             'title' => 'Kebijakan Privasi'
         ]);
     }
+
+    
+
+    public function products(Products $product)
+    {
+        return view('home.products.single', [
+            'siteName' => 'Digidaxa',
+            'title' => $product['name'],
+            'product' => $product,
+        ]);
+    }
 }

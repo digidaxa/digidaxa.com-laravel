@@ -31,6 +31,9 @@ Route::get('/collab', [HomeController::class, 'collab']);
 Route::get('/terms', [HomeController::class, 'terms']);
 Route::get('/privacy', [HomeController::class, 'privacy']);
 
+// homepage product detail route
+Route::get('/products/{product:slug}', [HomeController::class, 'products']);
+
 // auth route
 Route::get('/login', [AuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'loginAuthenticate']);
