@@ -10,7 +10,8 @@
       @foreach ($products as $product)
         <a href={{ '/products' .$product->slug }} class="w-[calc(50%-.8rem)] rounded-lg border shadow-sm overflow-hidden md:w-[calc((100%/3)-1rem)] lg:w-[calc(25%-1rem)]">
           <img 
-            src="https://decorunic.id/wp-content/uploads/2022/09/meja-pc-marvell-01.png"
+            src={{ "/img/product/" . $product->thumbnail }}
+            class="object-cover aspect-[4/3] w-full"
           >
           <div class="relative">
             <div class="m-2 text-left">

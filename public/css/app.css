@@ -671,6 +671,12 @@ video {
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
+.aspect-\[4\/3\] {
+  aspect-ratio: 4/3;
+}
+.aspect-\[3\/4\] {
+  aspect-ratio: 3/4;
+}
 .h-9 {
   height: 2.25rem;
 }
@@ -844,6 +850,10 @@ video {
 }
 .fill-current {
   fill: currentColor;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .object-fill {
   -o-object-fit: fill;
