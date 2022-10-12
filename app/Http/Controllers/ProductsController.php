@@ -17,7 +17,7 @@ class ProductsController extends Controller
 {
     public function index()
     {
-        return view('products.list', [
+        return view('admin.products.list', [
             'siteName' => 'Digidaxa 3D Management',
             'title' => 'Product List',
             'products' => Products::latest()->get()
@@ -30,7 +30,7 @@ class ProductsController extends Controller
         // $product = Products::find($id);
         // $product = Products::where('user_id', auth()->user()->id)->find($id);
 
-        return view('products.detail', [
+        return view('admin.products.detail', [
             'siteName' => 'Digidaxa 3D Management',
             'title' => 'Detail Produk '. $product['name'],
             'product' => $product,
@@ -39,7 +39,7 @@ class ProductsController extends Controller
     
     public function view3D(Products  $product)
     {
-        return view('products.view3d', [
+        return view('admin.products.view3d', [
             'siteName' => 'Digidaxa 3D Management',
             'title' => '3D View '. $product,
             'product' => $product
@@ -48,7 +48,7 @@ class ProductsController extends Controller
     
     public function viewAR(Products  $product)
     {
-        return view('products.viewar', [
+        return view('admin.products.viewar', [
             'siteName' => 'Digidaxa 3D Management',
             'title' => 'AR View '. $product,
             'product' => $product
@@ -63,7 +63,7 @@ class ProductsController extends Controller
     
     public function add()
     {
-        return view('products.add', [
+        return view('admin.products.add', [
             'siteName' => 'Digidaxa 3D Management',
             'title' => 'Product Add',
             'categories' => Category::all()
@@ -107,7 +107,7 @@ class ProductsController extends Controller
 
     public function edit(Products $product)
     {
-        return view('products.edit', [
+        return view('admin.products.edit', [
             'siteName' => 'Digidaxa 3D Management',
             'title' => 'Product Edit',
             'product' => $product,

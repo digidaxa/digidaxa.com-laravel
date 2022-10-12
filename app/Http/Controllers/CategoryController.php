@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        return view('categories/list', [
+        return view('admin.categories.list', [
             'siteName' => 'Digidaxa 3D Management',
             'title' => 'Product Category',
             'categories' => Category::all()
@@ -20,7 +20,7 @@ class CategoryController extends Controller
 
     public function add()
     {
-        return view('categories.add', [
+        return view('admin.categories.add', [
             'siteName' => 'Digidaxa 3D Management',
             'title' => 'Category Add'
         ]);
@@ -40,7 +40,7 @@ class CategoryController extends Controller
 
     public function edit(Category $category)
     {
-        return view('categories.edit', [
+        return view('admin.categories.edit', [
             'siteName' => 'Digidaxa 3D Management',
             'title' => 'Category Edit',
             'category' => $category

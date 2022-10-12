@@ -2,20 +2,20 @@
 @section('container')
 
 @include('partials.home.hero')
-<section id="Terkini" class="mt-20 pb-28">
+<section id="terkini" class="mt-20 pb-28">
   <div class="container">
     <h3 class="text-xl px-4 font-semibold">Terkini</h3>
     <div class="flex flex-wrap px-4 mt-2 gap-x-5 gap-y-6 justify-start">
       <!-- looping for 5 time -->
-      @for($i = 0; $i < 6; $i++)
-        <a href={{ '/detail' }} class="w-[calc(50%-.8rem)] rounded-lg border shadow-sm overflow-hidden md:w-[calc((100%/3)-1rem)] lg:w-[calc(25%-1rem)]">
+      @foreach ($products as $product)
+        <a href={{ '/products' .$product->slug }} class="w-[calc(50%-.8rem)] rounded-lg border shadow-sm overflow-hidden md:w-[calc((100%/3)-1rem)] lg:w-[calc(25%-1rem)]">
           <img 
             src="https://decorunic.id/wp-content/uploads/2022/09/meja-pc-marvell-01.png"
           >
           <div class="relative">
             <div class="m-2 text-left">
-              <h3 class="text-sm font-semibold">Marvel Meja PC Space Saving Multifungsi</h3>
-              <h4 class="text-xs">Meja</h4>
+              <h3 class="text-sm font-semibold">{{ $product->name }}</h3>
+              <h4 class="text-xs">{{ $product->category->name }}</h4>
             </div>
             {{-- love icon --}}
             <div class=" absolute top-1/2 right-5">
@@ -26,7 +26,7 @@
             </div>
           </div>
         </a>
-      @endfor
+      @endforeach
     </div>
   </div>
 </section>

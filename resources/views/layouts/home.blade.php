@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+    {{-- jika di path home --}}
+    @if (Request::is('/'))<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>@endif
+
 </head>
 
 <body>

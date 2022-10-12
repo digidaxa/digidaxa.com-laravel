@@ -26,7 +26,7 @@ class AuthController extends Controller
         // dd('berhasil login');
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            return redirect()->intended('/admin');
         }
 
         return back()->with('messageFailed', 'Login failed!');
@@ -40,7 +40,7 @@ class AuthController extends Controller
         
         request()->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/login');
     }
     
     // public function register()

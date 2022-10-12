@@ -5,7 +5,7 @@
       <a href={{ "/" }} class="nav-link border-primary active:font-medium transition-all ease-in duration-75">Beranda</a>
     </li>
     <li className="grup">
-      <a href={{ "/tentang-kami" }} class="nav-link border-primary active:font-medium transition-all ease-in duration-75">Tentang Kami</a>
+      <a href={{ "/about" }} class="nav-link border-primary active:font-medium transition-all ease-in duration-75">Tentang Kami</a>
     </li>
     <li className="grup">
       <a href={{ "/blog" }} class="nav-link border-primary active:font-medium transition-all ease-in duration-75">Blog</a>

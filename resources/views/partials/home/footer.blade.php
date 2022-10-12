@@ -76,16 +76,16 @@
           <h3 class="font-semibold text-dark text-xl mb-8 lg:text-2xl dark:text-light">Company</h3>
           <ul>
             <li id="0" class="mb-4">
-              <a href="https://www.digidaxa.com/faq" class="text-base font-medium text-dark hover:border-b-2 border-primary hover:text-primary lg:text-lg dark:text-light dark:hover:text-primary">FAQ</a>
+              <a href={{ '/faq' }} class="text-base font-medium text-dark hover:border-b-2 border-primary hover:text-primary lg:text-lg dark:text-light dark:hover:text-primary">FAQ</a>
             </li>
             <li id="1" class="mb-4">
-              <a href="https://www.digidaxa.com/karir" class="text-base font-medium text-dark hover:border-b-2 border-primary hover:text-primary lg:text-lg dark:text-light dark:hover:text-primary">Karir</a>
+              <a href={{ '/career' }} class="text-base font-medium text-dark hover:border-b-2 border-primary hover:text-primary lg:text-lg dark:text-light dark:hover:text-primary">Karir</a>
             </li>
             <li id="2" class="mb-4">
-              <a href="https://www.digidaxa.com/mengapa-digidaxa" class="text-base font-medium text-dark hover:border-b-2 border-primary hover:text-primary lg:text-lg dark:text-light dark:hover:text-primary">Mengapa Digidaxa?</a>
+              <a href={{ '/why-digidaxa' }} class="text-base font-medium text-dark hover:border-b-2 border-primary hover:text-primary lg:text-lg dark:text-light dark:hover:text-primary">Mengapa Digidaxa?</a>
             </li>
             <li id="3" class="mb-4">
-              <a href="https://www.digidaxa.com/collab" class="text-base font-medium text-dark hover:border-b-2 border-primary hover:text-primary lg:text-lg dark:text-light dark:hover:text-primary">Berkolaborasi dengan Kami</a>
+              <a href={{ '/collab' }} class="text-base font-medium text-dark hover:border-b-2 border-primary hover:text-primary lg:text-lg dark:text-light dark:hover:text-primary">Berkolaborasi dengan Kami</a>
             </li>
           </ul>
         </div>
@@ -95,12 +95,12 @@
   <div class="py-12 bg-primary/40">
       <div class="container flex flex-wrap">
         <div class="w-1/2">
-          <a href="https://digidaxa.com" class="text-dark hover:text-primary dark:text-light dark:hover:text-primary">© 2022 Digidaxa</a>
+          <a href={{ '/' }} class="text-dark hover:text-primary dark:text-light dark:hover:text-primary">© 2022 Digidaxa</a>
         </div>
         <div class="w-1/2 text-right">
-          <a href="https://digidaxa.com/terms" class="text-dark hover:text-primary dark:text-light dark:hover:text-primary">Terms</a>
+          <a href={{ '/terms' }} class="text-dark hover:text-primary dark:text-light dark:hover:text-primary">Terms</a>
           <span class="mx-3 dark:text-light">•</span>
-          <a href="https://digidaxa.com/privacy" class="text-dark hover:text-primary dark:text-light dark:hover:text-primary">Privacy</a>
+          <a href={{ '/privacy' }} class="text-dark hover:text-primary dark:text-light dark:hover:text-primary">Privacy</a>
         </div>
       </div>
   </div>
