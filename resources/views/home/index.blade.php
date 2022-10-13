@@ -8,25 +8,29 @@
     <div class="flex flex-wrap px-4 mt-2 gap-x-5 gap-y-6 justify-start">
       <!-- looping for 5 time -->
       @foreach ($products as $product)
-        <a href={{ '/products/' .$product->slug }} class="w-[calc(50%-.8rem)] rounded-lg border shadow-sm overflow-hidden md:w-[calc((100%/3)-1rem)] lg:w-[calc(25%-1rem)]">
+        <div class="w-[calc(50%-.8rem)] rounded-lg border shadow-sm overflow-hidden md:w-[calc((100%/3)-1rem)] lg:w-[calc(25%-1rem)]">
           <img 
             src={{ "/img/product/" . $product->thumbnail }}
             class="object-cover aspect-[4/3] w-full"
           >
-          <div class="relative">
+          <div class="relative flex justify-between">
             <div class="m-2 text-left">
-              <h3 class="text-sm font-semibold text-dark">{{ $product->name }}</h3>
+              <h3 class="text-sm font-semibold text-dark">
+                <a  href={{ '/products/' .$product->slug }}>
+                  {{ $product->name }}
+                </a>
+              </h3>
               <h4 class="text-xs text-secondary">{{ $product->category->name }}</h4>
             </div>
             {{-- love icon --}}
-            <div class=" absolute top-1/2 right-5">
-              <label for="like">
+            <div class="ml-1 mr-2 mt-2">
+              <label for="like" class="cursor-pointer">
                 <i id="like-icon" class="fas fa-heart opacity-50"></i>
               </label>
               <input type="checkbox" id="like" class="sr-only">
             </div>
           </div>
-        </a>
+        </div>
       @endforeach
     </div>
   </div>
