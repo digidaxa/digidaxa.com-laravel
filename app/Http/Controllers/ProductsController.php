@@ -18,7 +18,7 @@ class ProductsController extends Controller
     public function index()
     {
         return view('admin.products.list', [
-            'siteName' => 'Digidaxa 3D Management',
+            'siteName' => 'Digidaxa',
             'title' => 'Product List',
             'products' => Products::latest()->get()
             // 'products' => Products::where('user_id', auth()->user()->id)->latest()->get()
@@ -31,7 +31,7 @@ class ProductsController extends Controller
         // $product = Products::where('user_id', auth()->user()->id)->find($id);
 
         return view('admin.products.detail', [
-            'siteName' => 'Digidaxa 3D Management',
+            'siteName' => 'Digidaxa',
             'title' => 'Detail Produk '. $product['name'],
             'product' => $product,
         ]);
@@ -40,7 +40,7 @@ class ProductsController extends Controller
     public function view3D(Products  $product)
     {
         return view('admin.products.view3d', [
-            'siteName' => 'Digidaxa 3D Management',
+            'siteName' => 'Digidaxa',
             'title' => '3D View '. $product,
             'product' => $product
         ]);
@@ -49,7 +49,7 @@ class ProductsController extends Controller
     public function viewAR(Products  $product)
     {
         return view('admin.products.viewar', [
-            'siteName' => 'Digidaxa 3D Management',
+            'siteName' => 'Digidaxa',
             'title' => 'AR View '. $product,
             'product' => $product
         ]);
@@ -64,7 +64,7 @@ class ProductsController extends Controller
     public function add()
     {
         return view('admin.products.add', [
-            'siteName' => 'Digidaxa 3D Management',
+            'siteName' => 'Digidaxa',
             'title' => 'Product Add',
             'categories' => Category::all()
         ]);
@@ -79,6 +79,8 @@ class ProductsController extends Controller
             'file' => ['required'],
         ]);
 
+        $validatedData['thumbnail'] = $request->input('thumbnail', 'default_product.png');
+        $validatedData['description'] = $request->input('description', '');
         $validatedData['user_id'] = auth()->user()->id;
 
         $filename =  $request->file('file')->getClientOriginalName();
@@ -108,7 +110,7 @@ class ProductsController extends Controller
     public function edit(Products $product)
     {
         return view('admin.products.edit', [
-            'siteName' => 'Digidaxa 3D Management',
+            'siteName' => 'Digidaxa',
             'title' => 'Product Edit',
             'product' => $product,
             'categories' => Category::all()
@@ -125,7 +127,7 @@ class ProductsController extends Controller
         } else {
             $rules['slug'] = ['required','unique:products', 'max:255'];
         }
-        
+
         $validatedData = $request->validate($rules);
 
         if ($request->file('file')) {
@@ -139,6 +141,8 @@ class ProductsController extends Controller
             $validatedData['file'] = $path;
         }
 
+        $validatedData['thumbnail'] = $request->input('thumbnail', 'default_product.png');
+        $validatedData['description'] = $request->input('description', '');
         $validatedData['user_id'] = auth()->user()->id;
 
         Products::where('id', $product->id)

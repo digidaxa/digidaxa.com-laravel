@@ -38,10 +38,11 @@
     <!-- Custom styles for this template-->
     <link href="{{ '/sb-admin-2/css/sb-admin-2.min.css' }}" rel="stylesheet">
 
-    <?php if(Request::path() === 'products/list' || 'products/categories'): ;?>
-        <!-- Datatables-->
-        <link href="{{ '/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.css' }}" rel="stylesheet">
-    <?php endif;?>
+    @if(Request::is('admin/products/list') || Request::is('admin/products/categories'))<!-- Datatables-->
+    <link href="{{ '/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.css' }}" rel="stylesheet">
+    @endif
+
+    <link href={{ '/summernote/summernote-bs4.min.css' }} rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -87,14 +88,17 @@
     <!-- Custom scripts for all pages-->
     <script src="{{ '/sb-admin-2/js/sb-admin-2.min.js' }}"></script>
 
-    <?php if(Request::path() === 'products/list' || 'products/categories'): ;?>
-        <!-- Datatables Page level plugins -->
-        <script src="{{ '/sb-admin-2/vendor/datatables/jquery.dataTables.min.js' }}"></script>
-        <script src="{{ '/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js' }}"></script>
+    @if(Request::is('admin/products/list') || Request::is('admin/products/categories'))<!-- Datatables Page level plugins -->
+    <script src="{{ '/sb-admin-2/vendor/datatables/jquery.dataTables.min.js' }}"></script>
+    <script src="{{ '/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js' }}"></script>
 
-        <!-- Datatables Page level custom scripts -->
-        <script src="{{ '/sb-admin-2/js/demo/datatables-demo.js' }}"></script>
-    <?php endif;?>
+    <!-- Datatables Page level custom scripts -->
+    <script src="{{ '/sb-admin-2/js/demo/datatables-demo.js' }}"></script>
+    @endif
+
+    <!-- summernote -->
+    <script src={{ '/summernote/summernote-bs4.min.js' }}></script>
+    <script src={{ '/js/summernoteConf.js' }}></script>
 </body>
 
 </html>

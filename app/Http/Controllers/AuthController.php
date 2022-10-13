@@ -12,7 +12,7 @@ class AuthController extends Controller
     public function index()
     {
         return view('auth.login', [
-            'siteName' => 'Digidaxa 3D Management',
+            'siteName' => 'Digidaxa',
             'title' => 'Login'
         ]);
     }
@@ -46,7 +46,7 @@ class AuthController extends Controller
     // public function register()
     // {
     //     return view('auth.register', [
-    //         'siteName' => 'Digidaxa 3D Management',
+    //         'siteName' => 'Digidaxa',
     //         'title' => 'Register'
     //     ]);
     // }

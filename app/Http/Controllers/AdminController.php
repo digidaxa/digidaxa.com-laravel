@@ -12,7 +12,7 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.index', [
-            'siteName' => 'Digidaxa 3D Management',
+            'siteName' => 'Digidaxa',
             'title' => 'Admin',
             'countProduct' => Products::count(),
             'countCategory' => Category::count()

@@ -3,7 +3,7 @@
 @section('container')
   <h1 class="h3 mb-4 text-gray-800">{{ $title }}</h1>
   <div class="row">
-    <div class="col-12 col-lg-6 col-md-10 mb-3">
+    <div class="col-12 mb-3">
       <form action="{{ '/admin/products/' . $product->slug }}" method="post" enctype="multipart/form-data">
         @method('put')
         @csrf
@@ -17,13 +17,17 @@
           @enderror
         </div>
         <div class="form-group">
-          <label for="slug">Slug</label>
+          <label for="slug">Permalink</label>
           <input type="text" class="form-control @error('slug') is-invalid @enderror" name="slug" id="slug" placeholder="e.g. meja-tv-minimalis-kekinian-ishana" value="{{ old('slug', $product->slug ) }}">
           @error('slug')
             <div class="invalid-feedback">
               {{ $message }}
             </div>
           @enderror
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="summernote" name="description">{{ old('description', $product->description) }}</textarea>
         </div>
         <div class="form-group">
           <label for="category">Category</label>
@@ -49,11 +53,11 @@
               </div>
             @enderror
             <small id="fileHelp" class="form-text text-muted">Only accepts <b>.glb</b> file format</small>
-            <label class="custom-file-label" for="file">{{ ($product->file) ? substr($product->file, 7) : 'Choose file' }}</label>
+            <label class="custom-file-label" for="file">{{ ($product->file) ? substr($product->file, 7) : 'Choose File' }}</label>
           </div>
         </div>
-        <a href="{{ '/admin/products/list' }}" class="btn btn-secondary">&larr; Back</a>
-        <button type="submit" class="btn btn-primary" id="submitbtn">Update</button>
+        <a href="{{ '/admin/products/list' }}" class="btn btn-secondary">&larr; Kembali</a>
+        <button type="submit" class="btn btn-primary" id="submitbtn">Perbarui</button>
       </form>
       <script>
         const name = document.querySelector('#name');

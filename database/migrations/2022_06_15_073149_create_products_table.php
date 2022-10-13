@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('thumbnail')->nullable();
+            $table->text('description')->nullable();
             $table->string('file')->nullable();
             $table->timestamps();
         });

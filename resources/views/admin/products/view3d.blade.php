@@ -1,6 +1,6 @@
 <link href="{{ '/styles/main.css' }}" rel="stylesheet">
 <canvas class="result"></canvas>
-<input type="hidden" id="file3d" value="{{ asset('storage/' . $product->file) }}">
+<input type="hidden" id="file3d" value="{{ asset($product->file) }}">
 <script type="importmap">
   {
     "imports": {
