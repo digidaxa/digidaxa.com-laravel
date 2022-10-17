@@ -1,5 +1,5 @@
 <footer class="dark:bg-dark mb-16 lg:mb-0 border-t-2">
-  <div class="container bg-primary/0 pt-36">
+  <div class="container bg-primary/0 pt-16">
     <div class="flex flex-wrap">
       <div class="mb-11 w-full px-4 lg:w-1/2">
         <div class="mb-5 flex items-center">

@@ -1,5 +1,6 @@
 <link href="{{ '/styles/main.css' }}" rel="stylesheet">
 <canvas class="result"></canvas>
+<input type="hidden" id="file3dar" value="{{ asset($product->file) }}">
 <script type="importmap">
   {
     "imports": {
@@ -7,4 +8,4 @@
     }
   }
 </script>
-<script type="module" src="{{ '/js/3dview/index.js' }}"></script>
+<script type="module" src="{{ '/js/arview/index.js' }}"></script>
