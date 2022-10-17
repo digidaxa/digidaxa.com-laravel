@@ -16,7 +16,8 @@
         <div class="flex relative mb-5 md:w-[calc(50%-1.25rem)]">
           {{-- <img src={{ "/img/product/".$product->thumbnail }} class="rounded-3xl w-full aspect-[3/4] object-cover object-center"> --}}
           <iframe class="rounded-3xl w-full aspect-[3/4] object-cover object-center bg-gray-300 md:aspect-[4/3]" title={{ $product->name }} src="{{ URL::to('/admin/products/view-3d/' . $product->slug)}}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-          <a href="#" class="text-light bg-primary absolute flex rounded-lg w-14 h-14 md:w-11 md:h-11 bottom-5 right-5 md:bottom-3 md:right-3 justify-center items-center">
+          <a href="https://viewar.digidaxa.com/?name={{ $product->name }}&file={{ $product->file }}&url={{url('')}}/products/{{ $product->slug }}"
+            class="text-light bg-primary absolute flex rounded-lg w-14 h-14 md:w-11 md:h-11 bottom-5 right-5 md:bottom-3 md:right-3 justify-center items-center">
             <i class="fas fa-cube text-3xl md:text-2xl"></i>
           </a>
         </div>

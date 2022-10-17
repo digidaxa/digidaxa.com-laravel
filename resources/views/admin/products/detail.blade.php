@@ -28,7 +28,7 @@
 										<nav>
 											<div class="nav nav-tabs" id="nav-tab" role="tablist">
 												<a class="nav-item nav-link active" id="nav-view-3d-tab" data-toggle="tab" href="#nav-view-3d" role="tab" aria-controls="nav-view-3d" aria-selected="true">3D Model Embed</a>
-												<a class="nav-item nav-link" id="nav-view-ar-tab" data-toggle="tab" href="#nav-view-ar" role="tab" aria-controls="nav-view-ar" aria-selected="false">3D Model + AR Embed</a>
+												<a class="nav-item nav-link" id="nav-view-ar-tab" data-toggle="tab" href="#nav-view-ar" role="tab" aria-controls="nav-view-ar" aria-selected="false">3D Model + AR ULR</a>
 											</div>
 										</nav>
 										<div class="tab-content" id="nav-tabContent">
@@ -40,10 +40,12 @@
 												<a href="{{ '/admin/products/view-3d/'. $product->slug }}" target="_blank" rel="noreferrer" class="btn btn-info"><i class="fas fa-eye"></i> New Tab</a>
 											</div>
 											<div class="tab-pane fade" id="nav-view-ar" role="tabpanel" aria-labelledby="nav-view-ar-tab">
-												<pre>
+												{{-- <pre>
 													<code class="language-html">&lt;iframe title="{{ $product->name }}" src="{{ URL::to('/admin/products/view-ar/' . $product->slug)}}" frameborder="0" allowfullscreen="allowfullscreen" style="width:100%; height:264px">&lt;/iframe&gt;</code>
-												</pre>
-												<a href="{{ '/admin/products/view-ar/'. $product->slug }}" target="_blank" rel="noreferrer" class="btn btn-info"><i class="fas fa-eye"></i> New Tab</a>
+												</pre> --}}
+												<a href="https://viewar.digidaxa.com/?name={{ $product->name }}&file={{ $product->file }}&url={{url('')}}/products/{{ $product->slug }}" target="_blank" rel="noreferrer" class="btn btn-info mt-2">
+													<i class="fas fa-eye"></i> New Tab
+												</a>
 											</div>
 											<script src="{{ '/vendor/prism/prism.js' }}"></script>
 										</div>
